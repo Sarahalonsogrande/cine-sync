@@ -1,0 +1,7 @@
+{
+  "name": "cine-sync",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
