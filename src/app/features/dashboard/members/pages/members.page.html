@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Miembros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="medium">
+
+  @for(member of [1, 2, 3, 4, 5]; track $index) {
+    <app-member></app-member>
+  }
+
+</ion-content>

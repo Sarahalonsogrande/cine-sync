@@ -1,0 +1,23 @@
+<ion-tabs #tabs (ionTabsDidChange)="getCurrentTab($event)">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home-tab" href="/tabs/home-tab/">
+      <ion-icon aria-hidden="true" [name]="currentTab() === 'home-tab' ? 'planet' : 'planet-outline'"></ion-icon>
+      <ion-label>CASA</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="list-tab" href="/tabs/list-tab/">
+      <ion-icon aria-hidden="true" [name]="currentTab() === 'list-tab' ? 'list-circle' : 'list-circle-outline'"></ion-icon>
+      <ion-label>PELIS</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="add-tab" href="/tabs/add-tab">
+      <ion-icon aria-hidden="true" [name]="currentTab() === 'add-tab' ? 'add-circle' : 'add-circle-outline'"></ion-icon>
+      <ion-label>CREAR</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="login-tab" href="/tabs/login-tab">
+      <ion-icon aria-hidden="true" [name]="currentTab() === 'login-tab' ? 'people-circle' : 'people-circle-outline'"></ion-icon>
+      <ion-label>ENTRAR</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

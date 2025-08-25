@@ -1,0 +1,73 @@
+<ion-card>
+  <div>
+    <ion-row class="business-info">
+      <ion-col size="4">
+
+        <app-info-card
+          heading="Plan Expiry"
+          [value]="movie()?.actors"
+        ></app-info-card>
+      </ion-col>
+
+      <ion-col size="4">
+        <app-info-card
+          heading="Day Remaining"
+          [value]="movie()?.title"
+        ></app-info-card>
+      </ion-col>
+
+      <ion-col size="4">
+        <app-info-card
+          heading="Due Amount"
+          [value]="movie()?.plot"
+        ></app-info-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-card>
+
+
+<!-- <div class="item-card">
+  <ion-card>
+
+  <ion-thumbnail>
+    @if (genre as g) {
+      <ion-badge color="dark">
+        {{ g }}
+      </ion-badge>
+    }
+    @if (poster as p) {
+      <img class="car-image" [src]="p" />
+    }
+  </ion-thumbnail>
+
+  <ion-item lines="none">
+    <ion-label>
+      @if (title as t) {
+        <ion-text color="dark">
+          {{ t }}
+        </ion-text>
+      }
+      @if (plot as pl) {
+        <p class="desc">{{ pl }}</p>
+      }
+    </ion-label>
+
+    <ng-content select="[card-actions]"></ng-content>
+
+  </ion-item>
+  </ion-card>
+</div> -->
+
+<!-- <ion-item>
+  <ion-thumbnail slot="start">
+    <img [src]="movie.poster !== 'N/A' ? movie.poster : 'assets/imgs/avatar.png'" />
+  </ion-thumbnail>
+  <ion-label>
+    <h2>{{ movie.title }}</h2>
+    <p>{{ movie.year }}</p>
+  </ion-label>
+
+  <ng-content select="[card-actions]"></ng-content>
+
+</ion-item> -->
