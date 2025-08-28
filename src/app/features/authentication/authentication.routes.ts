@@ -17,5 +17,5 @@ export const routes: Routes = [
     {
         path: 'reset-password-tab',
         loadComponent: () => import('../authentication/pages/reset-password/reset-password.page').then(t => t.ResetPasswordPage)
-    }
+    },
 ];

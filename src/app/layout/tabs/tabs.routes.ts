@@ -8,37 +8,37 @@ export const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab-home',
+        path: 'home-tab',
         loadComponent: () =>
           import('../tabs/home-tab/home-tab.page').then((t) => t.HomeTabPage),
       },
       {
-        path: 'tab-list',
+        path: 'list-tab',
         loadComponent: () =>
           import('../tabs/list-tab/list-tab.page').then((t) => t.ListTabPage),
       },
       {
-        path: 'tab-add',
+        path: 'add-tab',
         loadComponent: () =>
           import('../tabs/add-tab/add-tab.page').then((t) => t.AddTabPage),
         // canActivate: [authenticationGuard],
 
       },
       {
-        path: 'authentication-tab',
+        path: 'login-tab',
         loadChildren: () =>
           import('../../features/authentication/authentication.routes').then(r => r.routes),
       },
       {
         path: '',
-        redirectTo: 'tab-home',
+        redirectTo: 'home-tab',
         pathMatch: 'full',
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab-home',
+    redirectTo: '/tabs/home-tab',
     pathMatch: 'full'
   }
 ];

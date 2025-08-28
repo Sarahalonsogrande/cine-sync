@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Firestore, collection, addDoc, collectionData, deleteDoc, doc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { Movie } from '../models/index-interfaces';
+import { Movie } from '../models';
 
 @Injectable({
     providedIn: 'root'

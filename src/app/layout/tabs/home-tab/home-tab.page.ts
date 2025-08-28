@@ -1,8 +1,12 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
-import { Movie } from 'src/app/core/models/index-interfaces';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonList } from '@ionic/angular/standalone';
+import { Movie } from 'src/app/core/models';
+import { moviesData } from 'src/app/data/mock/movies-data';
+import { ListHeaderComponent } from "src/app/shared/components/layout-iu/list-header/list-header.component";
+import { HorizontalListComponent } from "src/app/shared/components/layout-iu/horizontal-list/horizontal-list.component";
+import { MovieItemComponent } from "src/app/shared/components/layout-iu/movie-item/movie-item.component";
 // import { Movie, mapOmdbToMovie, Banner } from 'src/app/core/models/index-interfaces';
 
 @Component({
@@ -17,18 +21,17 @@ import { Movie } from 'src/app/core/models/index-interfaces';
     IonToolbar,
     CommonModule,
     FormsModule,
+    ListHeaderComponent,
+    IonList,
+    HorizontalListComponent,
+    MovieItemComponent
   ]
 })
 
 export class HomeTabPage implements OnInit {
 
-  // Example movies array, replace with your actual data source
-  private readonly moviesData: Movie[] = [];
-
-  // titles = signal<Movie[]>(this.titles);
-  movies = signal<Movie[]>(this.moviesData);
-  recentAddedMovies = signal<Movie[]>(this.moviesData.slice(0, 3));
-  // featuredGenres = signal<Genre[]>(this.genres);
+  movies = signal<Movie[]>(moviesData);
+  recentAddedMovies = signal<Movie[]>(moviesData.slice(0, 3));
 
   constructor() { }
 

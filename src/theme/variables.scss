@@ -1,2 +1,69 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+:root {
+    /* Blood color for buttons and accents */
+    --ion-color-primary: #ff2400;
+    --ion-color-primary-rgb: 255, 36, 0;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0, 0, 0;
+    --ion-color-primary-shade: #e02000;
+    --ion-color-primary-tint: #ff3a1a;
+
+    --ion-color-secondary: #330026;
+    --ion-color-secondary-rgb: 51, 0, 38;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #2d0021;
+    --ion-color-secondary-tint: #471a3c;
+
+    --ion-color-tertiary: #99003d;
+    --ion-color-tertiary-rgb: 153, 0, 61;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+    --ion-color-tertiary-shade: #870036;
+    --ion-color-tertiary-tint: #a31a50;
+
+    /* Warning color */
+    --ion-color-warning: #ff990a;
+    --ion-color-warning-rgb: 255, 153, 10;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0, 0, 0;
+    --ion-color-warning-shade: #e08709;
+    --ion-color-warning-tint: #ffa323;
+
+    --ion-color-light: #f2f2f2;
+    --ion-color-light-rgb: 242, 242, 242;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0, 0, 0;
+    --ion-color-light-shade: #d5d5d5;
+    --ion-color-light-tint: #f3f3f3;
+
+    // Custom Colors
+    --ion-color-background: #f8f8f8;
+    --ion-color-card: #ffffff;
+    --ion-color-text: #000000;
+    --ion-color-text-secondary: #8e8e93;
+    --ion-color-card-shadow: rgba(0, 0, 0, 0.05);
+    --ion-color-searchbar: #f2f2f7;
+
+    // Spacing
+    --ion-padding: 1rem; /* 16px */
+    --ion-margin: 1rem; /* 16px */
+    --ion-border-radius: 0.75rem; /* 12px */
+
+    // Typography
+    --ion-font-size-base: 1rem; /* 16px */
+    --ion-font-size-small: 0.875rem; /* 14px */
+    --ion-font-size-medium: 1rem; /* 16px */
+    --ion-font-size-large: 1.25rem; /* 20px */
+    --ion-font-size-xl: 1.5rem; /* 24px */
+
+    --ion-font-weight-normal: 400;
+    --ion-font-weight-medium: 500;
+    --ion-font-weight-bold: 600;
+
+	// Font family
+    --ion-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+        sans-serif;
+		
+    // Avant Garde
+    // --ion-font-family: AGRegular;
+}

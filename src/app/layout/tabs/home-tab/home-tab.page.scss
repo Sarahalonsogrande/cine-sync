@@ -1,0 +1,23 @@
+// ion-header {
+//     ion-toolbar {
+//         padding: 1rem;
+//         .bordered-icon-button {
+//             border: 1px solid rgb(188, 186, 186);
+//             border-radius: 50%;
+//             ion-icon {
+//                 font-size: var(--ion-font-size-xl);
+//                 padding: 0.4rem 0.3rem;
+//             }
+//         }
+//         .me-2 {
+//             margin-inline-end: 0.5rem;
+//         }
+//     }
+// }
+
+ion-content {
+    ion-list {
+        background: transparent;
+        margin-top: 1rem;
+    }
+}

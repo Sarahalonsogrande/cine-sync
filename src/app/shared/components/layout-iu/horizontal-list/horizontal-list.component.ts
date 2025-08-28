@@ -13,7 +13,7 @@ register();
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class HorizontalListComponent<T>  implements OnInit {
+export class HorizontalListComponent<T> implements OnInit {
 
   config = input<{
     slidesPerView: number;
@@ -45,9 +45,10 @@ export class HorizontalListComponent<T>  implements OnInit {
   swiperModules = [IonicSlides];
   swiperRef = viewChild<ElementRef>('swiper');
 
-  itemTemplate = input.required<TemplateRef<{ $implicit: T, index: number }>>();
-
+  itemTemplate = input.required<TemplateRef<{ $implicit: T }>>();
   readonly items = input.required<T[]>();
+
+  // currentIndex: any;
 
   constructor() { }
 
@@ -57,7 +58,8 @@ export class HorizontalListComponent<T>  implements OnInit {
     const swiperElement = this.swiperRef()?.nativeElement.swiper;
     const currentIndex = swiperElement.activeIndex;
 
-    // if (currentIndex >= 0 ) this.currentIndex.set(currentIndex);
+    // if (currentIndex >= 0) this.currentIndex.set(currentIndex);
+
     console.log(currentIndex);
 
     this.slideChanged.emit(currentIndex);
