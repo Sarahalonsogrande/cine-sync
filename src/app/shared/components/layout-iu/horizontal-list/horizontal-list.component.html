@@ -1,3 +1,4 @@
+<!-- Only render the slider when items are available -->
 @defer(when items()) {
 
   <swiper-container
@@ -8,6 +9,7 @@
     (swiperslidechange)="onSlideChange()"
   >
 
+  <!-- Optional: Show a special first slide if isFirstItem is true -->
   @if(isFirstItem()) {
     <swiper-slide>
       <ng-container
@@ -17,16 +19,18 @@
     </swiper-slide>
   }
 
+  <!-- Render a slide for each item in the items array -->
   @for(item of items(); track $index) {
     <swiper-slide>
       <ng-container
         *ngTemplateOutlet="itemTemplate()!;
-        context: {$implicit: item }"
+        context: {$implicit: item}"
       >
       </ng-container>
     </swiper-slide>
   }
 
+  <!-- Optional: Show a special last slide if isViewAll is true -->
   @if(isViewAll()) {
     <swiper-slide>
       <ng-container
