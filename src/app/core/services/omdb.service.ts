@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { secrets } from 'src/environments/secrets';
-import { OmdbMovie, OmdbSearchResponse } from '../models/index-interfaces';
+import { OmdbMovie, OmdbSearchResponse } from '../models';
 
 @Injectable({
     providedIn: 'root'

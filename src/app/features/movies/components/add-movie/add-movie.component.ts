@@ -15,7 +15,7 @@ import { OmdbService } from '../../../../core/services/omdb.service';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MovieDbService } from '../../../../core/services/movie-db.service';
-import { mapOmdbToMovie, Movie } from 'src/app/core/models/index-interfaces';
+import { mapOmdbToMovie, Movie } from 'src/app/core/models';
 
 @Component({
   selector: 'app-add-movie',

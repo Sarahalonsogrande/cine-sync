@@ -20,6 +20,7 @@ export class HorizontalListComponent<T> implements OnInit {
   */
   swiperModules = [IonicSlides];
 
+
   /*
     Reference to the swiper element in the template.
     Used to control the slider programmatically.
@@ -79,6 +80,14 @@ export class HorizontalListComponent<T> implements OnInit {
   */
   slideChanged = output<number>();
 
+  swiperModules = [IonicSlides];
+  swiperRef = viewChild<ElementRef>('swiper');
+
+  itemTemplate = input.required<TemplateRef<{ $implicit: T }>>();
+  readonly items = input.required<T[]>();
+
+  // currentIndex: any;
+
   constructor() { }
 
   ngOnInit() { }
@@ -93,6 +102,8 @@ export class HorizontalListComponent<T> implements OnInit {
 
     // Optionally, you could store the current index in a reactive variable here.
     // if (currentIndex >= 0) this.currentIndex.set(currentIndex);
+    // if (currentIndex >= 0) this.currentIndex.set(currentIndex);
+
     console.log(currentIndex);
 
     // this.slideChanged.emit(currentIndex);

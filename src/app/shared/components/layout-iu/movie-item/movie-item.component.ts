@@ -10,12 +10,22 @@ import {
     IonThumbnail
 } from "@ionic/angular/standalone";
 import { Movie } from 'src/app/core/models/index-interfaces';
+  IonIcon,
+  IonButton,
+  IonText,
+  IonLabel,
+  IonItem,
+  IonCard,
+  IonThumbnail
+} from "@ionic/angular/standalone";
+import { Movie } from 'src/app/core/models';
+import { ViewAllCardComponent } from '../view-all-card/view-all-card.component';
 
 @Component({
   selector: 'app-movie-item',
   templateUrl: './movie-item.component.html',
   styleUrls: ['./movie-item.component.scss'],
-    imports: [
+  imports: [
     IonIcon,
     IonButton,
     IonText,
@@ -24,7 +34,9 @@ import { Movie } from 'src/app/core/models/index-interfaces';
     IonBadge,
     IonCard,
     IonThumbnail,
-],
+    IonThumbnail,
+    ViewAllCardComponent
+  ],
 })
 
 export class MovieItemComponent implements OnInit {
@@ -35,5 +47,8 @@ export class MovieItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+  constructor() { }
+
+  ngOnInit() { }
 
 }

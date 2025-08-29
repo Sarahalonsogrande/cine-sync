@@ -1,13 +1,13 @@
 import { Component, input, OnInit } from '@angular/core';
-import { IonCard, IonButton, IonItem, IonThumbnail, IonLabel, IonText, IonBadge, IonIcon, IonRow, IonCol } from "@ionic/angular/standalone";
+import { IonCard, IonRow, IonCol } from "@ionic/angular/standalone";
 import { InfoCardComponent } from "../info-card/info-card.component";
-import { Movie } from 'src/app/core/models/index-interfaces';
+import { Movie } from 'src/app/core/models';
 
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],
-  imports: [IonCol, IonRow, IonBadge, IonText, IonLabel, IonItem, IonCard, IonThumbnail, InfoCardComponent],
+  imports: [IonCol, IonRow, IonCard, InfoCardComponent],
 })
 export class MovieCardComponent implements OnInit {
 

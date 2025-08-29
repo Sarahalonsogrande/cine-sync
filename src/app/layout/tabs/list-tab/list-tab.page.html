@@ -1,21 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Lista Grandesea
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content color="light" class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Lista Grandesea
-      </ion-title>
-    </ion-toolbar>
+  <ion-input placeholder="Buscapeli">
 
-  </ion-header>
+    <ion-icon slot="start" name="search-outline"></ion-icon>
 
-      <app-list-movie></app-list-movie>
+    <ion-button slot="end" color="primary">
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+
+  </ion-input>
+
+  <app-list-movie></app-list-movie>
 
 </ion-content>

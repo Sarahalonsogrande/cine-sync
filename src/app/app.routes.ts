@@ -20,14 +20,14 @@ export const routes: Routes = [
         loadComponent: () => import('./layout/tabs/add-tab/add-tab.page').then(t => t.AddTabPage),
         // canActivate: [authenticationGuard]
       },
-      // {
-      //   path: 'login-tab',
-      //   loadChildren: () => import('./features/authentication/authentication.routes').then(r => r.routes)
-      // },
       {
         path: 'login-tab',
-        loadComponent: () => import('./features/dashboard/members/pages/members.page').then(p => p.MembersPage)
+        loadChildren: () => import('./features/authentication/authentication.routes').then(r => r.routes)
       },
+      // {
+      //   path: 'login-tab',
+      //   loadComponent: () => import('./features/dashboard/members/pages/members/members.page').then(p => p.MembersPage)
+      // },
       {
         path: '',
         redirectTo: 'home-tab',
@@ -42,6 +42,10 @@ export const routes: Routes = [
   },
   {
     path: 'members',
-    loadComponent: () => import('./features/dashboard/members/pages/members.page').then( m => m.MembersPage)
+    loadComponent: () => import('./features/dashboard/members/pages/members/members.page').then(p=> p.MembersPage)
+  },
+  {
+    path: 'member-detail',
+    loadComponent: () => import('./features/dashboard/members/pages/member-detail/member-detail.page').then(p => p.MemberDetailPage)
   }
 ];

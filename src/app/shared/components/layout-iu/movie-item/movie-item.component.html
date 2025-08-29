@@ -8,6 +8,13 @@
     </ion-badge>
 
     <img class="car-image" [src]="movie()?.poster" />
+  <ion-thumbnail>
+    <!-- <ion-badge color="dark">
+      {{ movie()?.genre }}
+      <img [src]="movie()?.brandLogo" />
+    </ion-badge> -->
+
+    <img class="movie-image" [src]="movie()?.poster" />
   </ion-thumbnail>
 
   <ion-item lines="none">
@@ -17,6 +24,7 @@
       </ion-text>
       <p class="desc">{{ movie()?.plot }}</p>
 
+      <p class="desc">{{ movie()?.director }}</p>
     </ion-label>
 
     <ion-button slot="end" color="light" shape="round">
@@ -32,4 +40,14 @@
   <!-- @else {
   <app-view-all-card [route]="['/movies']"></app-view-all-card>
   } -->
+        name="heart"
+      ></ion-icon>
+    </ion-button>
+
+  </ion-item>
+  }
+
+  @else {
+  <app-view-all-card></app-view-all-card>
+  }
 </ion-card>
