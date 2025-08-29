@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
       Pelis Grandesea
@@ -6,14 +6,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Pelis Grandesea
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
+  <ion-list>
+    <app-list-header
+      heading="Últimas añadidas"
+      buttonName="Ver todas"
+      buttonIcon="eye"
+      buttonColor="medium">
+    </app-list-header>
+
+    <app-horizontal-list
+      [items]="recentAddedMovies()"
+      [itemTemplate]="raTemplate"
+      [config]="{slidesPerView: 1.6, spaceBetween: 20}"
+      [viewAllTemplate]="viewAllRaTemplate">
+    </app-horizontal-list>
+
+    <ng-template #raTemplate let-item>
+      <app-movie-item [movie]="item"></app-movie-item>
+    </ng-template>
+    <ng-template #viewAllRaTemplate>
+      <app-movie-item [isViewAll]="true"></app-movie-item>
+    </ng-template>
+
+  </ion-list>
 
 </ion-content>

@@ -9,14 +9,12 @@ import {
     IonCard,
     IonThumbnail
 } from "@ionic/angular/standalone";
-
 import { Movie } from 'src/app/core/models/index-interfaces';
-import { ViewAllCardComponent } from '../view-all-card/view-all-card.component';
 
 @Component({
-  selector: 'app-movies-item',
-  templateUrl: './movies-item.component.html',
-  styleUrls: ['./movies-item.component.scss'],
+  selector: 'app-movie-item',
+  templateUrl: './movie-item.component.html',
+  styleUrls: ['./movie-item.component.scss'],
     imports: [
     IonIcon,
     IonButton,
@@ -26,10 +24,10 @@ import { ViewAllCardComponent } from '../view-all-card/view-all-card.component';
     IonBadge,
     IonCard,
     IonThumbnail,
-    ViewAllCardComponent
 ],
 })
-export class MoviesItemComponent implements OnInit {
+
+export class MovieItemComponent implements OnInit {
 
   movie = input<Movie>();
   isViewAll = input<boolean>(false);

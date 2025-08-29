@@ -1,23 +1,24 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonList } from '@ionic/angular/standalone';
 import { Movie } from 'src/app/core/models/index-interfaces';
-// import { Movie, mapOmdbToMovie, Banner } from 'src/app/core/models/index-interfaces';
+import { ListHeaderComponent } from "src/app/shared/components/layout-iu/list-header/list-header.component";
+import { HorizontalListComponent } from "src/app/shared/components/layout-iu/horizontal-list/horizontal-list.component";
+import { MovieItemComponent } from 'src/app/shared/components/layout-iu/movie-item/movie-item.component';
 
 @Component({
   selector: 'app-home-tab',
   templateUrl: './home-tab.page.html',
   styleUrls: ['./home-tab.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonList,
     IonContent,
     IonHeader,
     IonTitle,
     IonToolbar,
     CommonModule,
-    FormsModule,
-  ]
+    FormsModule, ListHeaderComponent, HorizontalListComponent, MovieItemComponent]
 })
 
 export class HomeTabPage implements OnInit {
